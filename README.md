@@ -1,25 +1,19 @@
-# Ember-cli-alcatraz-client
+# ember-cli-alcatraz-client
 
-This README outlines the details of collaborating on this Ember addon.
+A javascript client to communicate with the Alcatraz PCI-compliant data store.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* Run `ember addon:install ember-cli-alcatraz-client` in the commandline
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+* Add the following to your `config/environment.js` file:
 
-## Running Tests
+```javascript
+ENV.alcatrazClient = {
+  rootUrl: #set the url here
+};
+```
 
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+Your application will now have to the `Alcatraz` object, which you can use to make requests.
