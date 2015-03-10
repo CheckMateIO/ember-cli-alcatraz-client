@@ -3,6 +3,6 @@ module.exports = {
   },
 
   afterInstall: function() {
-    return this.addBowerPackageToProject('alcatraz-client-js', '~0.0.1');
+    return this.addBowerPackageToProject('alcatraz-client-js');
   }
 };
