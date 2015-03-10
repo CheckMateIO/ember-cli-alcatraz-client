@@ -1,7 +1,7 @@
-import ENV from '../../config/environment';
+import config from '../../config/environment';
 
 export function initialize() {
-  Alcatraz.apiUrl = ENV.alcatrazClient.rootUrl
+  window.Alcatraz.rootUrl = config.alcatrazClient.rootUrl;
 }
 
 export default {
