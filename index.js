@@ -11,8 +11,7 @@ module.exports = {
   },
 
   included: function(app, parentAddon) {
-    this._super.included(app);
-
-    app.import(app.bowerDirectory + '/alcatraz-client-js/index.js');
+    this._super.included(app)
+    app.import('vendor/jquery-jsonp.js');;
   }
 };

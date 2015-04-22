@@ -1,8 +1,10 @@
 module.exports = {
-  normalizeEntityName: function() {
+
+  beforeInstall: function(options) {
+    // return this.addBowerPackageToProject('alcatraz-client');
   },
 
   afterInstall: function() {
-    return this.addBowerPackageToProject('alcatraz-client-js');
+    // return this.addBowerPackageToProject('alcatraz-client');
   }
 };

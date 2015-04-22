@@ -1,8 +1,8 @@
 import config from '../config/environment';
+import Alcatraz from 'ember-cli-alcatraz-client/alcatraz';
 
 export function initialize() {
-  if (!window.Alcatraz) { return; };
-  window.Alcatraz.rootUrl = config.alcatrazClient.rootUrl;
+  Alcatraz.rootUrl = config.alcatrazClient.rootUrl;
 }
 
 export default {
