@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-alcatraz-client",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Javascript client that communicates with the Alcatraz PCI-compliant data store",
   "directories": {
     "doc": "doc",
