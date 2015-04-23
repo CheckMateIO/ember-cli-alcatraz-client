@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var alcatraz = Ember.Object.extend({
+var alcatraz = {
 
   storeCard: function(data, callback) {
     return Ember.$.ajax({
@@ -57,6 +57,6 @@ var alcatraz = Ember.Object.extend({
       error: callback
     });
   }
-});
+};
 
 export default alcatraz;
