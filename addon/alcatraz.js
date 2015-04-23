@@ -1,18 +1,20 @@
+import Ember from 'ember';
+
 var alcatraz = {
 
   storeCard: function(data, callback) {
-    return $.ajax({
+    return Ember.$.ajax({
       url: this.rootUrl + "/cards",
       dataType: "jsonp",
-      data: $.extend({}, data, {
+      data: Ember.$.extend({}, data, {
         _method: 'post'
       }),
       success: callback
-    })
+    });
   },
 
   getCard: function(key, passcode, id, callback) {
-    return $.jsonp({
+    return Ember.$.jsonp({
       url: this.rootUrl + "/cards/" + id,
       callback: 'callback',
       dataType: "json",
@@ -25,14 +27,14 @@ var alcatraz = {
       },
       success: callback,
       error: callback
-    })
+    });
   },
 
   storeData: function(data, callback) {
-    return $.ajax({
+    return Ember.$.ajax({
       url: this.rootUrl + "/secure_data",
       dataType: "jsonp",
-      data: $.extend({}, data, {
+      data: Ember.$.extend({}, data, {
         _method: 'post'
       }),
       success: callback
@@ -40,7 +42,7 @@ var alcatraz = {
   },
 
   getData: function(key, passcode, id, callback) {
-    return $.jsonp({
+    return Ember.$.jsonp({
       url: this.rootUrl + "/secure_data/" + id,
       callback: 'callback',
       dataType: "json",
@@ -53,8 +55,8 @@ var alcatraz = {
       },
       success: callback,
       error: callback
-    })
+    });
   }
-}
+};
 
 export default alcatraz;
